@@ -1,0 +1,42 @@
+body {
+    overflow: hidden;
+    background-color: rgb(187, 231, 216);
+}
+
+.imgBlack {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.imgRed {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+.imgFirstBar,
+.imgSecondBar {
+    width: 40px;
+    height: 150px;
+    border-radius: 50px;
+    position: absolute;
+}
+
+.imgFirstBar {
+    top: 50%;
+    margin-top: -75px;
+}
+
+.imgSecondBar {
+    top: 50%;
+    margin-top: -75px;
+    left: 100%;
+    margin-left: -45px;
+}
