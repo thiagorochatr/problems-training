@@ -1,5 +1,4 @@
 
-
 // // Get modal element
 // const modalProject1 = document.getElementById('modalForProject1')
 // const modalProject2 = document.getElementById('modalForProject2')
@@ -45,40 +44,41 @@
 // function openProjectModal4() {
 //     modalProject4.style.display = 'block';
 // }
-// // Funtion to close modal
-// function closeProjectModal1() {
-//     modalProject1.style.display = 'none';
-// }
-// function closeProjectModal2() {
-//     modalProject2.style.display = 'none';
-// }
-// function closeProjectModal3() {
-//     modalProject3.style.display = 'none';
-// }
-// function closeProjectModal4() {
-//     modalProject4.style.display = 'none';
-// }
-// // Funtion to close modal if outside-modal click
-// function clickOutsideForCloseProjectModal1(e) {
-//     if (e.target == modalProject1) {
+//     // Funtion to close modal
+//     function closeProjectModal1() {
 //         modalProject1.style.display = 'none';
 //     }
-// }
-// function clickOutsideForCloseProjectModal2(e) {
-//     if (e.target == modalProject2) {
+//     function closeProjectModal2() {
 //         modalProject2.style.display = 'none';
 //     }
-// }
-// function clickOutsideForCloseProjectModal3(e) {
-//     if (e.target == modalProject3) {
+//     function closeProjectModal3() {
 //         modalProject3.style.display = 'none';
 //     }
-// }
-// function clickOutsideForCloseProjectModal4(e) {
-//     if (e.target == modalProject4) {
+//     function closeProjectModal4() {
 //         modalProject4.style.display = 'none';
 //     }
-// }
+//                 // Funtion to close modal if outside-modal click
+//                 function clickOutsideForCloseProjectModal1(e) {
+//                     if (e.target == modalProject1) {
+//                         modalProject1.style.display = 'none';
+//                     }
+//                 }
+//                 function clickOutsideForCloseProjectModal2(e) {
+//                     if (e.target == modalProject2) {
+//                         modalProject2.style.display = 'none';
+//                     }
+//                 }
+//                 function clickOutsideForCloseProjectModal3(e) {
+//                     if (e.target == modalProject3) {
+//                         modalProject3.style.display = 'none';
+//                     }
+//                 }
+//                 function clickOutsideForCloseProjectModal4(e) {
+//                     if (e.target == modalProject4) {
+//                         modalProject4.style.display = 'none';
+//                     }
+//                 }
+
 
 // Coloco os elementos de cada modal nas variáveis
 let modalProject0 = {
@@ -104,22 +104,47 @@ let modalProject3 = {
 // Coloco as variáveis em uma Array
 let projectsArray = [modalProject0, modalProject1, modalProject2, modalProject3]
 
+let projetos = document.getElementsByClassName('modalProjects')
+// let projetos = document.getElementsByClassName('project') 
+// Vem como ARRAY, isso é muito bom
 
-let projetos = document.getElementsByClassName('project') // Vem como ARRAY, isso é muito bom
+
+let closeModalBtn = document.getElementsByClassName('modalProjectsCloseBtn')
+// Botão para fechar a modal
 
 // Função que recebe o índice da modal - que é o mesmo do projeto
 function showProjectAndModal(i) {
     console.log(projetos[i])
     console.log(projectsArray[i].h2)
+    projetos[i].style.display = 'block';
+
+    // Fechar ao clicar fora da modal
+    // setTimeout(() => { document.addEventListener('click', handleClickOutside, false) }, 200);
 }
 // Colocar em cada imagem (no HTML) um "onclick" com o índice da própria imagem
 
-// showProjectAndModal(0)
+// Função para fechar a modal no botão X
+function closeProjectModal(i) {
+    console.log("clicado para fechar modal")
+    projetos[i].style.display = 'none';
+}
+// Colocar em cada botão-span (no HTML) um "onclick" com o índice do próprio projeto
 
 
 
 
+// Fechar modal ao apertar fora da mesma
 
+// let insideModal = document.getElementsByClassName('modalForProject-content')
+
+// const handleClickOutside = (e, i) => {
+//     if (!projetos[i].contains(e.target)) {
+//         projetos[i].style.display = 'none';
+//         document.removeEventListener('click', handleClickOutside, false)
+//     }
+// }
+
+// const modalProject1 = document.getElementById('modalForProject1')
 
 
 
